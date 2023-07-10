@@ -2,231 +2,262 @@
 <html>
 <head><meta name="referrer" content="default">
   <style type="text/css">
-                  /* List design by 5cm */
-
-
-@\import "https://fonts.googleapis.com/css?family=Roboto:400,700,900";
-
-body {
-	background: fixed url(https://image.myanimelist.net/ui/OBQhD1PfE-lw-5UcBY4inAiijyW1741WWw-bR2lRe66ir9Hw3JH_z277DYOQ2UVJwkkNtWdLjNW9nV42M4E62qIMZcey35T_wtTCzkIfpytlotBub7RiDmocQD9e-c0O),
-       fixed center/cover url(https://image.myanimelist.net/ui/gcSya8onPajB6FLr_CNy9wWbkAfgACBzPN8nC8vLcbHgZczWX58LDeemMkga4GmK);
-	background-color: black;
-	font: 13px Roboto;
-	color: #bbb;
-	text-transform: uppercase;
-	overflow-x: hidden;
+                  
+/*
+// Self-explanatory
+*/
+BODY
+{
+margin: 0;
+color: #FFFFFF;
+font-size: 11.00px;
+font-family: Verdana, Arial;
+background-color: #000000;
 }
 
-a {
-	color: #bbb;
-	text-decoration: none;
+/*
+// Determines the positioning of your list
+*/
+
+#list_surround
+{
+margin: 0 auto;
+width: 920px;
 }
 
-#list_surround {
-	width: 700px;
-	margin: auto;
+/*
+// All links on your list
+*/
+
+a
+{
+color: #7C9EB3;
+text-decoration: none;
 }
 
-#mal_control_strip {
-	width: 100%!important;
-	position: relative;
-	margin: 30px auto 0!important;
-	background: none!important;
-	text-align: right;
+a:visited
+{
+color: #7C9EB3;
+text-decoration: none;
 }
 
-#mal_cs_pic, #mal_cs_powered, #mal_cs_listinfo div:last-child, #mal_cs_links div:first-child a:last-child,
-[data-owner=""] #mal_cs_listinfo, [data-owner=""] #mal_cs_links a, #mal_cs_otherlinks [href*=board],
-.status_selected, .category_totals, br:last-of-type, #grand_totals {
-	display: none!important;
+a:hover
+{
+color: #7C9EB3;
+text-decoration: underline;
 }
 
-#mal_control_strip td, #mal_control_strip td div, #mal_cs_otherlinks strong {
-	display: inline;
-	width: auto;
-	padding: 0;
-	border: 0;
-	font-size: 0!important;
-	display: inline;
+/*
+// Modal
+*/
+
+.mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score li a {
+    border: 1px solid #7C9EB3 !important;
+}
+.mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score li a:hover {
+    background-color: #7C9EB3 !important;
+    color: #ffffff;
 }
 
-#mal_cs_listinfo strong a, #mal_cs_otherlinks strong a {
-	position: absolute;
-	left: 30px;
-	top: 15px;
-	font: 900 20px Roboto;
-	line-height: 0;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	text-decoration: none;
+/*
+// Alternating row color 1
+*/
+
+.td1
+{
+
+color: #FFFFFF;
+border-width: 0px 1px 1px 0px;
+border-style: solid;
+border-color: #000000;
+padding: 2px;
+background-color: #464646;
 }
 
-#mal_cs_links a, #mal_cs_otherlinks div:last-child a {
-	font: 700 18px Roboto !important;
-	color: #bbb !important;
-	line-height: 0 !important;
-	letter-spacing: 1px;
-	text-decoration: none !important;
-	text-transform: uppercase !important;
-	position: relative;
-	top: 15px;
-	margin: 0 20px;
-	padding: 30px 10px;
+/*
+// Alternating row color 2
+*/
+
+.td2
+{
+
+color: #FFFFFF;
+border-width: 0px 1px 1px 0px;
+border-style: solid;
+border-color: #000000;
+padding: 2px;
+background-color: #5A5A5A;
 }
 
-#mal_cs_links a:hover, #mal_cs_otherlinks div:last-child a:hover {
-	color: white !important;
-	background: center/180px no-repeat url(https://image.myanimelist.net/ui/9B7cOWBekTIg3zYqpluchK8yhPmBpM8stbh-GgbxWpxZyTj2xlVtkkijs4h1OhC2VfPGjCuAuRrcdyhO-Wy_YXcvZJtwXGd_GsBzLXf4C8U);
+/*
+// This represents the "Anime Title", "Score", "# Eps" columns
+*/
+
+.table_header
+{
+
+color: #FFFFF;
+border-width: 1px 1px 1px 0px;
+border-style: solid;
+border-color: #000000;
+background-color: #000000;
+padding: 2px;
 }
 
-#mal_control_strip strong a:hover, .status_not_selected a:hover {
-	color: #dd0000;
+/*
+// headerLink represents the color of the links inside the table_header
+*/
+
+.table_headerLink
+{
+color: ;
 }
 
-.header_cw {
-	background: calc(50% + 180px) -4%/600px url(https://image.myanimelist.net/ui/6_7QMoe1yhQt6XoeE7Kagcl2-cEsPiOh_eMI9p1w7e-l-OVGrHRwqeS0BEmfAsNfHIAiJxzjALzntSs4BpPUjp19OMqL3qo7hYgxEYGstlUQ902_oDrMrpUzVd9QROLy);
+.table_headerLink:Visited
+{
+color: ;
 }
 
-.header_completed {
-	background: 50% 10%/800px url(https://image.myanimelist.net/ui/WAfDirVJZJrysLzovlv90Yj07nrzfmX10bEozmev-Y45CoXkVRwcOhZmAli-MTKKbRXxVhD_HuuVuX3SMAcE6JgzOpGQJXBlBh39lXj2o3fxwnI2mAri8oD17ero505w66VKWwqSATtN9jbmJZNW6w);
+.table_headerLink:Hover
+{
+color: ;
 }
 
-.header_onhold {
-	background: calc(50% - 250px) 15%/800px url(https://image.myanimelist.net/ui/dZb1qbk5xpvKJzNF8g7YTNPIvU5FErX3_6ZOqO1xymYOc1mb20CYtY2QGwv9jI5ZTO4TRwpaKKKqADjJy34gTccSQR0qpGGi7hHja8lyzNy3SwumAKN0KCXy_kPgUaQ8jcoEj5Rx4TMmuFvSfFMG9l0ImF87ZrExfgkfeoeYLY4YL0eW7yX84x2WD9vbPoum);
+/*
+// Controls the select form decoration (the drop down select box)
+*/
+
+.form
+{
+border-width: 1px 1px 1px 1px;
+border-color: #000000;
+border-style: solid;
+color: #000000;
+padding: 2px;
+font-size: 11.00px;
+font-family: Verdana, Arial;
 }
 
-.header_dropped {
-	background: calc(50% + 300px) 50%/500px url(https://image.myanimelist.net/ui/ogNrt6xjoxcgp7z0v_1Zi7R6iciupdWDHdDNzuuERYNtS1EV6KPS-3AxpfSuDX8sdUps17j7nOcAcga5JhfGw78qfU1p4c0K6JhdyThlx54);
+
+/* Which 'status' up top is selected? */
+
+.status_selected
+{
+
+	color: #FFFFFF;
+	border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 2px;
+    background-color: #464646;
+	}
+
+.status_not_selected
+{
+
+	color: #FFFFFF;
+	border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 2px;
+    background-color: #5A5A5A;
+	}
+
+/*
+Header classes for Currently Watching, Completed, Dropped, etc...
+*/
+
+.header_cw
+{
+
 }
 
-.header_ptw {
-	background: 50% 100%/280px url(https://image.myanimelist.net/ui/XuWicyTSrbdPQqZ1UPyA9x9xH3mZsA_NYA-yk0UnMbXEpNnfMRFAZVwTkTfWD7rQwO7FTqULi1tMhmzhSSrM_w);
+.header_completed
+{
+
 }
 
-br:first-child + table {
-	position: absolute;
-	left: 30px;
-	margin-top: 20px;
-	width: auto;
+.header_onhold
+{
+
 }
 
-table[class^=header] {
-	position: absolute;
-	width: 102%;
-	height: 250px;
-	left: -1%;
-	margin-top: -250px;
-	z-index: -1;
-	background-repeat: no-repeat;
-	background-color: #bb1414;
-	background-blend-mode: darken;
-	-webkit-transform: rotate(-5deg);
-	transform: rotate(-4deg);
+.header_dropped
+{
+
 }
 
-table[class^=header] div {
-	font: 900 40px Roboto;
-	color: white;
-	letter-spacing: .25em;
-	text-align: center;
-	-webkit-transform: rotate(4deg);
-	transform: rotate(4deg);
+.header_ptw
+{
+
 }
 
-.table_header {
-	padding: 10px 0;
+.header_title {
+font-size: 14px;
+font-weight: bold;
 }
 
-.table_header[style], .table_header:not([align]) {
-	visibility: hidden;
+
+.category_totals
+{
+
 }
 
-table + br {
-	position: relative;
-	display: block;
-	margin-bottom: 350px;
+#grand_totals
+{
+text-align: center;
 }
 
-tr:hover [class^=td], tr:hover [class^=td] a {
-	color: white;
-	transition: all .5s ease-in-out;
+/* header_al is the div surrounding "User's Anime List" at the top */
+
+.header_al
+{
+font-weight: bold;
+font-size: 16px;
 }
 
-.td1, .td2 {
-	height: 22px;
+/* header_al_links is the div with your "Profile" and "MyAnimeList home" links */
+.header_al_links
+{
+
 }
 
-.td1:hover small, .td2:hover small {
-	opacity: 1;
+/* controls what styles you can give to all the anime titles in your list */
+.animetitle
+{
+font-weight: bold;
 }
 
-small:only-child {
-	font-size: 10px;
-	overflow: hidden;
-	width: 21px;
-	display: inline-block;
-	margin-top: 3px;
-	white-space: nowrap;
-	opacity: 0;
+/*
+copyright contains the "Producted by Garrett Gyssler" text
+DO NOT REMOVE OR HIDE THIS DIV
+IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
+*/
+
+#copyright
+{
+padding-top: 6px;
+text-align: center;
+margin: 0 auto;
+width: 920px;
 }
 
-a + small {
-	position: absolute;
-	margin: 3px 0 0 5px;
-	font-size: 10px;
-	color: #888;
+#recaptcha-terms {
+    text-align: center;
+    font-size: 8px;
+    margin-top: 4px;
+    width: 920px;
 }
 
-.animetitle {
-	font-weight: 700;
-	display: inline-block;
-	max-width: 400px;
-	overflow: hidden;
-	line-height: 1.4em;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+.grecaptcha-badge {
+    visibility: hidden;
 }
 
-.animetitle:before {
-	content: '';
-	color: #bb1414;
-	position: absolute;
-	margin: -4px 0 0 -30px;
-	opacity: 0;
-	background: black 50%/contain no-repeat url(https://image.myanimelist.net/ui/-f7i5JXpKOnNVyBMVJMUglJAPhnlAMscPVktMUNJqpngCeSdkL6b6Q32oybc8BCygKi9_4hSpp9Ao3bfyh5mKGHExPqewRVpNHcRThLxCXE);
-	width: 30px;
-	height: 30px;
-	transition: opacity .5s ease-in-out;
-}
 
-.animetitle:hover {
-	color: #dd0000!important;
-}
-
-.animetitle:hover:before {
-	opacity: 1;
-}
-
-.status_not_selected {
-	display: block;
-	text-align: left;
-	margin-bottom: 5px;
-}
-
-.status_not_selected a {
-	font: 10px Roboto;
-	color: #999;
-	letter-spacing: 1px;
-}
-
-#copyright {
-	margin-top: 40px!important;
-	height: 50px;
-}
       </style>
   
-<title>Nakul&#039;s Anime List - codernakul</title><script type="text/javascript" src="https://cdn.myanimelist.net/js/quantcast_choice.js?v=1685807386"></script>
-<script type="text/javascript" src="https://cdn.myanimelist.net/js/cmp.js?v=1685807386"></script>
+<title>Nakul&#039;s Anime List - codernakul</title><script type="text/javascript" src="https://cdn.myanimelist.net/js/quantcast_choice.js?v=1689017205"></script>
+<script type="text/javascript" src="https://cdn.myanimelist.net/js/cmp.js?v=1689017205"></script>
 <script defer src="https://cdn.unblockia.com/h.js"></script>
 <script>
   var clientDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
@@ -251,7 +282,7 @@ a + small {
 </script>
 </head>
 
-<body class="classic-ownlist ownlist  " data-owner="" data-country-code="IN" data-work="anime">
+<body class="classic-ownlist ownlist stacks-challenge-2023-july js-color-pc-constant " data-owner="" data-country-code="IN" data-work="anime">
 
 
     
@@ -348,8 +379,7 @@ a + small {
             <a href="https://myanimelist.net/anime/52034/Oshi_no_Ko" target="_blank" class="animetitle" title="Anime Information">
               <span>&quot;Oshi no Ko&quot;</span>
             </a>
-                                      <small>Airing</small>
-            
+                        
                                   </td>
 
                                 <td class="td1" align="center" width="45">
